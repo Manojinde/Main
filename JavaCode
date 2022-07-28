@@ -1,1 +1,35 @@
 
+
+Feature: BookStore Application Methods
+
+  
+  Scenario: Get Book record
+  
+    Given User Set GET book service api endpoint
+    When User Send GET HTTP request  
+    Then User receive valid HTTP reponse 200
+  
+  Examples: 
+      | Url                              | Requestbody  | Response status  |
+      | http://localhost:8080/showbooks  | Valid Json   | 200   
+    
+  Scenario: Post Book record
+   
+    Given User set PoST book service api endpoint
+    When User Send POST HTTP request
+    Then User receive valid HTTP response 201
+    
+    
+  Scenario: Put Book record
+   
+    Given User set PUT book service api endpoint
+    When User Send PUT HTTP request
+    Then User receive valid HTTP response 200
+    
+   Scenario: Delete Book record
+   
+    Given User set Delete book service api endpoint
+    When User Send Delete HTTP request
+    Then User receive valid HTTP response 200
+    
+    
